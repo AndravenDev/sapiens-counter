@@ -39,10 +39,24 @@ const cards = [
 export default function App() {
   return (
     <div
-      className="min-h-screen bg-[#07090f] text-white flex flex-col items-center justify-center px-6 py-12 gap-10 font-sans"
-      style={{ backgroundImage: 'radial-gradient(ellipse at 50% 30%, #0d1a3a 0%, #07090f 70%)' }}
+      className="relative min-h-screen text-white flex flex-col items-center justify-start pt-12 px-6 pb-12 gap-10 font-sans"
+      style={{ backgroundColor: '#0E101C' }}
     >
-      <div className="text-center max-w-3xl">
+      {/* Background image */}
+      <div
+        className="absolute inset-x-0 top-0 h-[60%] pointer-events-none"
+        style={{
+          backgroundImage: 'url(/spaceBackground.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+        }}
+      />
+      {/* Gradient overlay fading wallpaper into page color */}
+      <div
+        className="absolute inset-x-0 top-0 h-[60%] pointer-events-none"
+        style={{ background: 'linear-gradient(to bottom, transparent 20%, #0E101C 100%)' }}
+      />
+      <div className="relative z-10 text-center max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
           SAPIENS COUNTER: TRACKING<br />THE STATE OF INTELLIGENCE
         </h1>
@@ -51,7 +65,7 @@ export default function App() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl">
         {cards.map((card, i) => (
           <Card key={i} {...card} />
         ))}
