@@ -5,14 +5,26 @@ export default function Card({
   badge,
   color,
   svgPath,
+  wallpaper,
 }) {
   return (
     <div
-      className="flex items-center justify-between rounded-xl px-6 py-5 gap-4 transition"
+      className="relative flex items-center justify-between rounded-xl px-6 py-5 gap-4 transition overflow-hidden"
       style={{ backgroundColor: "#1b1f33", border: `1px solid ${color}40` }}
     >
+      {/* Right side wallpaper dissolving left */}
+      <div className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(/${wallpaper})`,
+          backgroundSize: '60%',
+          backgroundPosition: 'calc(100% + 40px) center',
+          maskImage: 'linear-gradient(to left, black 0%, transparent 65%)',
+          WebkitMaskImage: 'linear-gradient(to left, black 0%, transparent 65%)',
+          opacity: 0.8,
+        }}
+      />
       <div
-        className="shrink-0 w-14 h-14"
+        className="relative z-10 shrink-0 w-14 h-14"
         style={{
           filter: `drop-shadow(0 0 6px ${color}) drop-shadow(0 0 16px ${color}80)`,
         }}
@@ -29,7 +41,7 @@ export default function Card({
           }}
         />
       </div>
-      <div className="flex flex-col gap-2 flex-1">
+      <div className="relative z-10 flex flex-col gap-2 flex-1">
         <div className="flex items-end gap-2">
           <span className="text-5xl font-bold text-white leading-none">
             {stat}

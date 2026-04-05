@@ -9,6 +9,7 @@ const cards = [
     icon: "🌍",
     color: "#4d86f0",
     svgPath: "/planet-earth-world-earth.svg",
+    wallpaper: "earthWallpaperDark.png",
   },
   {
     stat: 1,
@@ -18,6 +19,7 @@ const cards = [
     icon: "🧠",
     color: "#63f5ff",
     svgPath: "/dna.svg",
+    wallpaper: "brainWallpaper.jpg",
   },
   {
     stat: 1,
@@ -27,6 +29,7 @@ const cards = [
     icon: "🤖",
     color: "#2ECC71",
     svgPath: "/robot-head.svg",
+    wallpaper: "processor.jpg",
   },
   {
     stat: 0,
@@ -36,7 +39,8 @@ const cards = [
     icon: "⚡",
     badge: "DEVELOPING",
     color: "#FF7A30",
-    svgPath: "/newBrain.svg"
+    svgPath: "/newBrain.svg",
+    wallpaper: "hybrid.jpg",
   },
 ];
 
