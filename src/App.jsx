@@ -64,13 +64,20 @@ export default function App() {
         }}
       />
       <div className="relative z-10 text-center text-[#CAE2EB]">
-        <h1 className="mb-4 tracking-normal leading-tight mb-4 text-6xl md:text-[52px]" style={{ textShadow: '0 0 18px rgba(2, 2, 2, 3.4), 0 0 70px rgb(196, 192, 192)' }}>
+        <h1
+          className="mb-4 tracking-normal leading-tight mb-4 text-6xl md:text-[52px]"
+          style={{
+            textShadow:
+              "0 0 18px rgba(2, 2, 2, 3.4), 0 0 70px rgb(196, 192, 192)",
+          }}
+        >
           <span className="[-webkit-text-stroke:0.5px_#000000] font-medium">
-            SAPIENS COUNTER: <span className="font-extrabold md:text-[54px]">TRACKING</span>
+            SAPIENS COUNTER:{" "}
+            <span className="font-extrabold md:text-[54px]">TRACKING</span>
           </span>
           <br className="leading-[0]" />
           <span className="font-extrabold [-webkit-text-stroke:0.5px_#000000] -mt-2 block md:text-[54px]">
-             THE STATE OF INTELLIGENCE
+            THE STATE OF INTELLIGENCE
           </span>
         </h1>
         <p className="text-gray-400 text-base">
