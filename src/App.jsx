@@ -7,9 +7,8 @@ const cards = [
     description:
       "The observable universe contains only one known planet with intelligent life: Earth.",
     icon: "🌍",
-    glow: "shadow-blue-500/40",
-    ring: "ring-blue-500/30",
-    color: "#1A1E2D",
+    color: "#4d86f0",
+    svgPath: "/planet-earth-world-earth.svg",
   },
   {
     stat: 1,
@@ -17,9 +16,8 @@ const cards = [
     description:
       "The observable universe contains only one known form of natural intelligence: Humans.",
     icon: "🧠",
-    glow: "shadow-emerald-500/40",
-    ring: "ring-emerald-500/30",
-    color: "#1F2E35",
+    color: "#63f5ff",
+    svgPath: "/dna.svg",
   },
   {
     stat: 1,
@@ -27,9 +25,8 @@ const cards = [
     description:
       "Artificial Intelligence, created by humans, now exists on Earth.",
     icon: "🤖",
-    glow: "shadow-orange-500/40",
-    ring: "ring-orange-500/30",
-    color: "#162828",
+    color: "#2ECC71",
+    svgPath: "/robot-head.svg",
   },
   {
     stat: 0,
@@ -37,10 +34,9 @@ const cards = [
     description:
       "Hybrid intelligence, the integration of human and artificial minds — does not yet exist.",
     icon: "⚡",
-    glow: "shadow-cyan-500/40",
-    ring: "ring-cyan-500/30",
     badge: "DEVELOPING",
-    color: "#1F1E24",
+    color: "#FF7A30",
+    svgPath: "/newBrain.svg"
   },
 ];
 
