@@ -65,7 +65,7 @@ export default function App() {
       />
       <div className="relative z-10 text-center text-[#CAE2EB]">
         <h1
-          className="mb-4 tracking-normal leading-tight mb-4 text-6xl md:text-[52px]"
+          className="tracking-normal leading-tight text-6xl md:text-[52px]"
           style={{
             textShadow:
               "0 0 18px rgba(2, 2, 2, 3.4), 0 0 70px rgb(196, 192, 192)",
@@ -76,11 +76,11 @@ export default function App() {
             <span className="font-extrabold md:text-[54px]">TRACKING</span>
           </span>
           <br className="leading-[0]" />
-          <span className="font-extrabold [-webkit-text-stroke:0.5px_#000000] -mt-2 block md:text-[54px]">
+          <span className="font-extrabold [-webkit-text-stroke:0.5px_#000000] -mt-2 block md:text-[54px]" >
             THE STATE OF INTELLIGENCE
           </span>
         </h1>
-        <p className="text-gray-400 text-base">
+        <p className="text-base text-[#CAE2EB] text-[20px] [text-shadow:5px_2px_39px_rgba(0,0,0, 0.93)]" >
           Monitoring the presence and evolution of natural, artificial, and
           hybrid intelligence.
         </p>
