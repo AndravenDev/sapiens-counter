@@ -19,7 +19,7 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
   const borderRef = useRef(null);
   const cardRef = useRef(null);
 
-  const dimBorder = hexToRgba(color, 0.15);
+  const dimBorder = hexToRgba(color, 0.35);
 
   function handleMouseMove(e) {
     const rect = cardRef.current.getBoundingClientRect();
@@ -56,14 +56,14 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
           width: 1,
           height: 1,
           borderRadius: '50%',
-          boxShadow: `0 0 120px 80px ${hexToRgba(lightenHex(color, 0.65), 0.5)}, 0 0 250px 130px ${hexToRgba(lightenHex(color, 0.65), 0.2)}`,
+          boxShadow: `0 0 60px 30px ${hexToRgba(lightenHex(color, 0.85), 0.08)}, 0 0 120px 60px ${hexToRgba(lightenHex(color, 0.85), 0.03)}`,
         }}
       />
 
       {/* Border glow wrapper */}
       <div
         ref={borderRef}
-        className="rounded-xl transition-colors duration-300"
+        className="rounded-xl transition-all duration-300 hover:scale-[1.02]"
         style={{ background: dimBorder, padding: '2px' }}
       >
       <div
@@ -71,7 +71,7 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative flex items-center justify-between rounded-[11px] px-6 py-5 gap-4 overflow-hidden h-44 cursor-pointer"
+        className="relative flex items-start justify-between rounded-[11px] px-6 py-5 gap-4 overflow-hidden h-44 cursor-pointer"
         style={{ backgroundColor: "#1b1f33" }}
       >
         {/* Wallpaper */}
