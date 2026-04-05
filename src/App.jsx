@@ -1,4 +1,5 @@
 import Card from "./Card";
+import TabBar from "./TabBar";
 
 const cards = [
   {
@@ -95,6 +96,10 @@ export default function App() {
         {cards.map((card, i) => (
           <Card key={i} {...card} />
         ))}
+      </div>
+
+      <div className="relative z-10">
+        <TabBar />
       </div>
     </div>
   );
