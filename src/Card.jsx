@@ -90,8 +90,13 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
             backgroundImage: `url(/${wallpaper})`,
             backgroundSize: '60%',
             backgroundPosition: 'calc(100% + 40px) center',
-            maskImage: 'linear-gradient(to left, black 0%, transparent 65%)',
-            WebkitMaskImage: 'linear-gradient(to left, black 0%, transparent 65%)',
+            backgroundRepeat: 'no-repeat',
+            maskImage: `
+              radial-gradient(ellipse 55% 80% at 95% 50%, black 30%, transparent 80%)
+            `,
+            WebkitMaskImage: `
+              radial-gradient(ellipse 55% 80% at 95% 50%, black 30%, transparent 80%)
+            `,
             opacity: 0.8,
           }}
         />
