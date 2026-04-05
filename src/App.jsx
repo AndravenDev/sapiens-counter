@@ -29,7 +29,8 @@ const cards = [
     icon: "🤖",
     color: "#2ECC71",
     svgPath: "/robot-head.svg",
-    wallpaper: "processor.jpg",
+    wallpaper: "aiProcessor.jpg",
+    badge: 'ACTIVE'
   },
   {
     stat: 0,

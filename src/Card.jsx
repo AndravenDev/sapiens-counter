@@ -114,7 +114,7 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
         </div>
 
         <div className="relative z-10 flex flex-col gap-2 flex-1">
-          <div className="flex items-end gap-2">
+          <div className="flex items-end gap-2 mb-4">
             <span className="text-5xl font-bold leading-none" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 10px ${hexToRgba(color, 0.6)}, 0 0 25px ${hexToRgba(color, 0.3)}` }}>{stat}</span>
             <div className="flex flex-col leading-tight mb-1">
               {title.map((line) => (
@@ -122,16 +122,16 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
               ))}
             </div>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-          {badge && (
-            <span
-              className="self-start text-xs px-2 py-0.5 rounded tracking-widest mt-1"
-              style={{ border: `1px solid ${color}80`, color }}
-            >
-              {badge}
-            </span>
-          )}
+          <p className="text-m leading-relaxed">{description}</p>
         </div>
+        {badge && (
+          <span
+            className="absolute z-10 bottom-4 right-5 text-xs px-2 py-0.5 rounded-xl tracking-widest"
+            style={{ border: `1px solid ${color}80`, color: lightenHex(color, 0.65), backgroundColor: hexToRgba(color, 0.6) }}
+          >
+            {badge}
+          </span>
+        )}
       </div>
       </div>
     </>
