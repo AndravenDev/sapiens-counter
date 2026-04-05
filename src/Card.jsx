@@ -119,20 +119,20 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
         </div>
 
         <div className="relative z-10 flex flex-col gap-2 flex-1">
-          <div className="flex items-end gap-2 mb-4">
-            <span className="text-5xl font-bold leading-none" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 10px ${hexToRgba(color, 0.6)}, 0 0 25px ${hexToRgba(color, 0.3)}` }}>{stat}</span>
+          <div className="flex items-normal gap-2 mb-4">
+            <span className="text-6xl font-bold leading-none" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 10px ${hexToRgba(color, 0.6)}, 0 0 25px ${hexToRgba(color, 0.3)}` }}>{stat}</span>
             <div className="flex flex-col leading-tight mb-1">
               {title.map((line) => (
-                <span key={line} className="text-xs font-semibold tracking-widest" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 8px ${hexToRgba(color, 0.5)}` }}>{line}</span>
+                <span key={line} className="text-lg font-semibold tracking-widest" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 8px ${hexToRgba(color, 0.5)}` }}>{line}</span>
               ))}
             </div>
           </div>
-          <p className="text-m leading-relaxed">{description}</p>
+          <p className="text-m leading-relaxed max-w-[75%]">{description}</p>
         </div>
         {badge && (
           <span
             className="absolute z-10 bottom-4 right-5 text-xs px-2 py-0.5 rounded-xl tracking-widest"
-            style={{ border: `1px solid ${color}80`, color: lightenHex(color, 0.65), backgroundColor: hexToRgba(color, 0.6) }}
+            style={{ border: `1px solid ${color}80`, color: lightenHex(color, 0.65), backgroundColor: hexToRgba(color, 0.4) }}
           >
             {badge}
           </span>

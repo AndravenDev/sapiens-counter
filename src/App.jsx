@@ -48,7 +48,7 @@ const cards = [
 export default function App() {
   return (
     <div
-      className="relative min-h-screen text-white flex flex-col items-center justify-start pt-12  pb-12 gap-10 font-sans"
+      className="relative min-h-screen text-white flex flex-col items-center justify-start pt-12 pb-12 gap-10 font-sans px-4 sm:px-6 lg:px-0"
       style={{ backgroundColor: "#0E101C" }}
     >
       {/* Background image */}
