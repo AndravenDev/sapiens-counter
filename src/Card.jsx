@@ -1,5 +1,12 @@
 import { useRef } from "react";
 
+function lightenHex(hex, amount = 0.6) {
+  const r = Math.round(parseInt(hex.slice(1, 3), 16) + (255 - parseInt(hex.slice(1, 3), 16)) * amount);
+  const g = Math.round(parseInt(hex.slice(3, 5), 16) + (255 - parseInt(hex.slice(3, 5), 16)) * amount);
+  const b = Math.round(parseInt(hex.slice(5, 7), 16) + (255 - parseInt(hex.slice(5, 7), 16)) * amount);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 function hexToRgba(hex, alpha) {
   const r = parseInt(hex.slice(1, 3), 16);
   const g = parseInt(hex.slice(3, 5), 16);
@@ -49,7 +56,7 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
           width: 1,
           height: 1,
           borderRadius: '50%',
-          boxShadow: `0 0 120px 80px ${hexToRgba(color, 0.5)}, 0 0 250px 130px ${hexToRgba(color, 0.2)}`,
+          boxShadow: `0 0 120px 80px ${hexToRgba(lightenHex(color, 0.65), 0.5)}, 0 0 250px 130px ${hexToRgba(lightenHex(color, 0.65), 0.2)}`,
         }}
       />
 
@@ -98,10 +105,10 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
 
         <div className="relative z-10 flex flex-col gap-2 flex-1">
           <div className="flex items-end gap-2">
-            <span className="text-5xl font-bold leading-none" style={{ color: hexToRgba(color, 0.85), textShadow: `0 0 10px ${hexToRgba(color, 0.6)}, 0 0 25px ${hexToRgba(color, 0.3)}` }}>{stat}</span>
+            <span className="text-5xl font-bold leading-none" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 10px ${hexToRgba(color, 0.6)}, 0 0 25px ${hexToRgba(color, 0.3)}` }}>{stat}</span>
             <div className="flex flex-col leading-tight mb-1">
               {title.map((line) => (
-                <span key={line} className="text-xs font-semibold tracking-widest" style={{ color: hexToRgba(color, 0.85), textShadow: `0 0 8px ${hexToRgba(color, 0.5)}` }}>{line}</span>
+                <span key={line} className="text-xs font-semibold tracking-widest" style={{ color: lightenHex(color, 0.65), textShadow: `0 0 8px ${hexToRgba(color, 0.5)}` }}>{line}</span>
               ))}
             </div>
           </div>
