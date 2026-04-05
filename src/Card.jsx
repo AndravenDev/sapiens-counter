@@ -1,6 +1,9 @@
-export default function Card({ stat, title, description, icon, glow, ring, badge }) {
+export default function Card({ stat, title, description, icon, glow, ring, badge, color }) {
   return (
-    <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl px-6 py-5 gap-4 hover:bg-white/8 transition">
+    <div
+      className="flex items-center justify-between border border-white/10 rounded-xl px-6 py-5 gap-4 transition"
+      style={{ backgroundColor: color }}
+    >
       <div className="flex flex-col gap-2 flex-1">
         <div className="flex items-end gap-2">
           <span className="text-5xl font-bold text-white leading-none">{stat}</span>

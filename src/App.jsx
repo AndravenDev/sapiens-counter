@@ -9,6 +9,7 @@ const cards = [
     icon: "🌍",
     glow: "shadow-blue-500/40",
     ring: "ring-blue-500/30",
+    color: "#1A1E2D",
   },
   {
     stat: 1,
@@ -16,8 +17,9 @@ const cards = [
     description:
       "The observable universe contains only one known form of natural intelligence: Humans.",
     icon: "🧠",
-    glow: "shadow-purple-500/40",
-    ring: "ring-purple-500/30",
+    glow: "shadow-emerald-500/40",
+    ring: "ring-emerald-500/30",
+    color: "#1F2E35",
   },
   {
     stat: 1,
@@ -25,8 +27,9 @@ const cards = [
     description:
       "Artificial Intelligence, created by humans, now exists on Earth.",
     icon: "🤖",
-    glow: "shadow-emerald-500/40",
-    ring: "ring-emerald-500/30",
+    glow: "shadow-orange-500/40",
+    ring: "ring-orange-500/30",
+    color: "#162828",
   },
   {
     stat: 0,
@@ -34,9 +37,10 @@ const cards = [
     description:
       "Hybrid intelligence, the integration of human and artificial minds — does not yet exist.",
     icon: "⚡",
-    glow: "shadow-orange-500/40",
-    ring: "ring-orange-500/30",
+    glow: "shadow-cyan-500/40",
+    ring: "ring-cyan-500/30",
     badge: "DEVELOPING",
+    color: "#1F1E24",
   },
 ];
 
