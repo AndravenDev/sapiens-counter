@@ -66,7 +66,7 @@ export default function Card({ stat, title, description, badge, color, svgPath, 
           width: 1,
           height: 1,
           borderRadius: '50%',
-          boxShadow: `0 0 60px 30px ${hexToRgba(lightenHex(color, 0.85), 0.08)}, 0 0 120px 60px ${hexToRgba(lightenHex(color, 0.85), 0.03)}`,
+          boxShadow: `0 0 80px 40px ${hexToRgba(color, 0.35)}, 0 0 160px 80px ${hexToRgba(color, 0.15)}`,
         }}
       />
 
